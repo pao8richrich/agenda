@@ -39,13 +39,13 @@ class App extends Component {
       <div className="App">
 
         <Container className="justify-content-md-center">
-          {
-            data.map(card => (
-              <Row>
-                <Col sm={3}>
-                  <SignupForm />
-                </Col>
-                <Col sm={9}>
+        <Row>
+          <Col sm={3}>
+            <SignupForm />
+          </Col>
+          {data.map(card => (
+              
+                <Col>
                   <MyCard
                     nombre={card.nombre}
                     apellido={card.apellido}
@@ -54,11 +54,10 @@ class App extends Component {
                     fechaInicio={card.fechaInicio}
                   />
                 </Col>
-              </Row>
             ))
           }
-
-        </Container>\
+          </Row>
+        </Container>
       </div>
     );
   }
