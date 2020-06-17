@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import MyCard from './MyCard'
 import { Container, Row, Col, Badge } from 'react-bootstrap';
+import SignupForm from "./components/Form"
 
 const info = [
   {
@@ -41,7 +42,10 @@ class App extends Component {
           {
             data.map(card => (
               <Row>
-                <Col>
+                <Col sm={3}>
+                  <SignupForm />
+                </Col>
+                <Col sm={9}>
                   <MyCard
                     nombre={card.nombre}
                     apellido={card.apellido}
