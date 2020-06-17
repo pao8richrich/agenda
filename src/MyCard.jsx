@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card , Button, } from 'react-bootstrap';
+import { Card , Button,  } from 'react-bootstrap';
 import avatarcito from './img/avatar1.jpeg'
 
 function MyCard() {
@@ -14,6 +14,7 @@ function MyCard() {
             <Card.Text>
             Esta es mi descripcion
             </Card.Text>
+            <small className="text-muted">Last updated 3 mins ago</small>
             <Button variant="primary">Go somewhere</Button>
         </Card.Body>
         </Card>
