@@ -1,29 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import MyCard from './MyCard'
-import {Container, Row, Col, Badge} from 'react-bootstrap';
+import { Container, Row, Col, Badge } from 'react-bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-     
-      <Container className="justify-content-md-center">
-      <h1>
-       The TEAM <Badge variant="secondary">:)</Badge>
-      </h1>
-        <Row>
-          <Col>
-          <MyCard />
-          </Col>
-        </Row>
-      </Container>
+const info = [
+  {
+    "nombre": "Daniel",
+    "apellido": "Martinez",
+    "ciudad": "Bogota",
+    "empleo": "desarrollador",
+    "fechaInicio": "12/03/2020"
+  },
+  {
+    "nombre": "Pao",
+    "apellido": "Martinez",
+    "ciudad": "Bogota",
+    "empleo": "desarrollador",
+    "fechaInicio": "12/03/2020"
+  },
+  {
+    "nombre": "Maria",
+    "apellido": "Consuelo",
+    "ciudad": "Bogota",
+    "empleo": "desarrollador",
+    "fechaInicio": "12/03/2020"
+  }
+];
+class App extends Component {
 
-     
-      </header>
-    </div>
-  );
+  state = {
+    data: info
+  }
+
+  render() {
+    const data = this.state.data;
+    return (
+      <div className="App">
+
+        <Container className="justify-content-md-center">
+          {
+            data.map(card => (
+              <Row>
+                <Col>
+                  <MyCard
+                    nombre={card.nombre}
+                    apellido={card.apellido}
+                    ciudad={card.ciudad}
+                    empleo={card.empleo}
+                    fechaInicio={card.fechaInicio}
+                  />
+                </Col>
+              </Row>
+            ))
+          }
+
+        </Container>\
+      </div>
+    );
+  }
 }
 
 export default App;
