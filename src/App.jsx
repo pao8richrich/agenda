@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import MyCard from './MyCard'
 import {Container, Row, Col, Badge} from 'react-bootstrap';
+import SignupForm from "./components/Form";
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
        The TEAM <Badge variant="secondary">:)</Badge>
       </h1>
         <Row>
-          <Col>
+          <Col sm={3}>
+            <SignupForm />
+          </Col>
+          <Col sm={9}>
           <MyCard />
           </Col>
         </Row>

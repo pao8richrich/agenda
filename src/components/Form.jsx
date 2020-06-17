@@ -42,7 +42,7 @@ const SignupForm = () => {
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="firstName">First Name</label>
+      <label htmlFor="firstName">Nombre</label>
       <input
         id="firstName"
         name="firstName"
@@ -51,7 +51,7 @@ const SignupForm = () => {
         value={formik.values.firstName}
       />
       {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
-      <label htmlFor="lastName">Last Name</label>
+      <label htmlFor="lastName">Apellido</label>
       <input
         id="lastName"
         name="lastName"
@@ -60,7 +60,23 @@ const SignupForm = () => {
         value={formik.values.lastName}
       />
       {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
-      <label htmlFor="email">Email Address</label>
+      <label htmlFor="email">Ciudad</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        onChange={formik.handleChange}
+        value={formik.values.email}
+      />
+      <label htmlFor="email">Profesión</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        onChange={formik.handleChange}
+        value={formik.values.email}
+      />
+      <label htmlFor="email">Fecha de ingreso</label>
       <input
         id="email"
         name="email"
